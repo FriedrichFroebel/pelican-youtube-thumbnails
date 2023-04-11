@@ -48,4 +48,5 @@ setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    keywords=["pelican", "plugin", "youtube"],
 )
