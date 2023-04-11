@@ -28,7 +28,7 @@ jobs:
       run:
         python -m pip install .[dev]
     - name: run tests
-      run:
+      run: |
         cd tests
         python -m unittest discover --verbose --start-directory .
         cd ..
