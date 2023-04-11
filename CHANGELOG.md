@@ -1,6 +1,6 @@
 # Development version
 
-# Version 0.3 - 2023-04-11
+# Version 0.3.1 - 2023-04-11
 
 * Fix the broken wheel distribution.
 
