@@ -10,7 +10,7 @@ ROOT_DIRECTORY = Path(__file__).parent.resolve()
 setup(
     name="pelican-youtube-thumbnails",
     description="Pelican plugin to link to YouTube videos by their thumbnail",
-    version="0.3.1",
+    version="0.3.2",
     license="AGPL-3.0",
     long_description=(ROOT_DIRECTORY / "README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
