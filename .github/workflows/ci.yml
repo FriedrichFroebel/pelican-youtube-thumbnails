@@ -29,7 +29,9 @@ jobs:
         python -m pip install .[dev]
     - name: run tests
       run:
-        python -m unittest discover --verbose --start-directory tests
+        cd tests
+        python -m unittest discover --verbose --start-directory .
+        cd ..
     - name: run flake8
       run:
         python -m flake8 .

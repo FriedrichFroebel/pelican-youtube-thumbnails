@@ -23,7 +23,7 @@ from typing import Any, Dict, NoReturn
 import requests
 from PIL import Image
 from bs4 import BeautifulSoup
-from pelican import signals
+from pelican.plugins import signals
 from pelican.contents import Content, Static
 
 if sys.version_info < (3, 9):
