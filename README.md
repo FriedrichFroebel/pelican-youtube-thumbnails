@@ -6,7 +6,9 @@ This Pelican plugin saves the thumbnails of included YouTube videos inside a loc
 
 ## Installation
 
-You can easily install this plugin using *pip* straight from a source checkout: `python -m pip install .`
+The package is available on PyPI and can be installed using `pip install pelican-youtube-thumbnails`.
+
+Alternatively, you may want to install it straight from a source checkout: `python -m pip install .`
 
 ## Usage
 
