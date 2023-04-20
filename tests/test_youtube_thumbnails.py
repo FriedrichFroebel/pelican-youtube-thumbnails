@@ -21,7 +21,7 @@ logging.getLogger().setLevel(logging.WARNING)
 class YoutubeThumbnailsPluginTestCase(TestCase):
     @property
     def test_data(self) -> Path:
-        return Path(__file__).resolve().parent / "test_data"
+        return Path(__file__).resolve().parent / "data"
 
     def test_get_output_file(self):
         with TemporaryDirectory() as directory:
