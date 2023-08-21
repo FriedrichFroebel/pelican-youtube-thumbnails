@@ -37,5 +37,5 @@ jobs:
         python -m flake8 .
     - name: run mypy
       run: |
-        python -m pip install mypy
+        python -m pip install mypy types-beautifulsoup4 types-Pillow types-requests
         mypy --explicit-package-bases pelican/ tests/
