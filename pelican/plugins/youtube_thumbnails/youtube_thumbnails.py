@@ -18,7 +18,7 @@ import sys
 from contextlib import contextmanager
 from io import BytesIO
 from pathlib import Path
-from typing import Any, Dict, NoReturn
+from typing import Any, cast, Dict, Generator
 
 import requests
 from PIL import Image
@@ -44,7 +44,8 @@ def get_output_file(settings: PELICAN_SETTINGS_TYPE, video_id: str) -> Path:
     :param video_id: The ID of the YouTube video.
     :return: The path for the output file.
     """
-    directory = Path(settings.get("OUTPUT_PATH"), "images", "youtube")
+    output_path = cast(str, settings.get("OUTPUT_PATH"))
+    directory = Path(output_path, "images", "youtube")
     if not directory.exists():
         directory.mkdir(parents=True)
 
@@ -52,7 +53,7 @@ def get_output_file(settings: PELICAN_SETTINGS_TYPE, video_id: str) -> Path:
 
 
 @contextmanager
-def get_logo_file() -> Path:
+def get_logo_file() -> Generator[Path, None, None]:
     """
     Get the path to the YouTube logo file.
 
@@ -94,7 +95,7 @@ def add_image_overlay(image_content: bytes) -> Image.Image:
 
 def save_thumbnail(
     settings: PELICAN_SETTINGS_TYPE, video_id: str, output_file: Path
-) -> NoReturn:
+) -> None:
     """
     Save the thumbnail of the given video inside the specified file. This may
     add an overlay to the thumbnail itself.
