@@ -36,6 +36,7 @@ setup(
         "dev": [
             "flake8",
             "pep8-naming",
+            "flake8-bugbear",
             "pelican>=4.5",
             "Markdown",
         ],
