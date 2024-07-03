@@ -33,7 +33,7 @@ keywords = [
     "plugin",
     "youtube",
 ]
-requires-python = ">=3.7, <4"
+requires-python = ">=3.8, <4"
 dependencies = [
     "beautifulsoup4",
     "lxml",
