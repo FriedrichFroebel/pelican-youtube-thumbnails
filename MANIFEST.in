@@ -1,2 +1,3 @@
 include COPYING
 include pelican/plugins/youtube_thumbnails/logo.png
+include tests/data/*.png
