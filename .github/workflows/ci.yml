@@ -14,6 +14,10 @@ jobs:
     name: Python ${{ matrix.python }}
     steps:
     - uses: actions/checkout@v4
+    - name: apt install for lxml
+      run: |
+          sudo apt-get install libxml2-dev libxslt-dev
+      if: ${{ matrix.python == '3.13-dev' }}
     - name: set up Python
       uses: actions/setup-python@v5
       with:
