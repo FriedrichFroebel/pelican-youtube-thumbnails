@@ -1,5 +1,7 @@
 # Development version
 
+# Version 0.3.3 - 2024-09-06
+
 * Migrate to `pyproject.toml`.
 * Fix missing test data in source distributions.
 
