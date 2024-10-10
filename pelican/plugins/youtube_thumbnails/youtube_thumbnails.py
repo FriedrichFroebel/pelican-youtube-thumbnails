@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 Pelican plugin for YouTube videos.
 
@@ -14,11 +11,13 @@ inside your source files using :code:`.. youtube:: myVideoId` inside an own
 paragraph.
 """
 
-import sys
+from __future__ import annotations
+
+import importlib.resources
 from contextlib import contextmanager
 from io import BytesIO
 from pathlib import Path
-from typing import Any, Dict, NoReturn
+from typing import Any
 
 import requests
 from PIL import Image
@@ -26,13 +25,8 @@ from bs4 import BeautifulSoup
 from pelican.plugins import signals
 from pelican.contents import Content, Static
 
-if sys.version_info < (3, 9):
-    import importlib_resources  # noqa: F401
-else:
-    import importlib.resources as importlib_resources  # noqa: F401
 
-
-PELICAN_SETTINGS_TYPE = Dict[str, Any]
+PELICAN_SETTINGS_TYPE = dict[str, Any]
 
 
 def get_output_file(settings: PELICAN_SETTINGS_TYPE, video_id: str) -> Path:
@@ -58,8 +52,8 @@ def get_logo_file() -> Path:
 
     :return: The path to the logo.
     """
-    path = importlib_resources.files("pelican.plugins.youtube_thumbnails") / "logo.png"
-    with importlib_resources.as_file(path) as path:
+    path = importlib.resources.files("pelican.plugins.youtube_thumbnails") / "logo.png"
+    with importlib.resources.as_file(path) as path:
         yield path
 
 
@@ -94,7 +88,7 @@ def add_image_overlay(image_content: bytes) -> Image.Image:
 
 def save_thumbnail(
     settings: PELICAN_SETTINGS_TYPE, video_id: str, output_file: Path
-) -> NoReturn:
+) -> None:
     """
     Save the thumbnail of the given video inside the specified file. This may
     add an overlay to the thumbnail itself.

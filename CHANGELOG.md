@@ -1,5 +1,7 @@
 # Development version
 
+* Drop support for Python 3.8.
+
 # Version 0.3.3 - 2024-09-06
 
 * Migrate to `pyproject.toml`.

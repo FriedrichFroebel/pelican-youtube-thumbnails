@@ -33,13 +33,12 @@ keywords = [
     "plugin",
     "youtube",
 ]
-requires-python = ">=3.8, <4"
+requires-python = ">=3.9, <4"
 dependencies = [
     "beautifulsoup4",
     "lxml",
     "Pillow",
     "requests",
-    "importlib-resources; python_version < '3.9'",
 ]
 
 [project.urls]
