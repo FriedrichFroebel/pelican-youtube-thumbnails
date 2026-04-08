@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 name = "pelican-youtube-thumbnails"
 description = "Pelican plugin to link to YouTube videos by their thumbnail"
 version = "0.3.3"
-license = {text = "AGPL-3.0-or-later"}
+license = "AGPL-3.0-or-later"
 readme = {file = "README.md", content-type = "text/markdown"}
 authors = [
     {name = "FriedrichFröbel"},
@@ -19,7 +19,6 @@ classifiers = [
     "Framework :: Pelican",
     "Framework :: Pelican :: Plugins",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: GNU Affero General Public License v3",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
