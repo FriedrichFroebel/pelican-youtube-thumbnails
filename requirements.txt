@@ -3,7 +3,7 @@
 # letting `dependabot` update them for new releases.
 beautifulsoup4==4.15.0
 lxml==6.1.3
-pillow==12.3.0
+pillow==13.0.0
 requests==2.34.2
 pelican==4.12.0
 markdown==3.11.2
