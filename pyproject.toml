@@ -31,11 +31,11 @@ keywords = [
     "plugin",
     "youtube",
 ]
-requires-python = ">=3.10, <4"
+requires-python = ">=3.11, <4"
 dependencies = [
     "beautifulsoup4",
     "lxml",
-    "Pillow",
+    "pillow",
     "requests",
 ]
 
@@ -51,7 +51,7 @@ dev = [
     "pep8-naming",
     "flake8-bugbear",
     "pelican>=4.5",
-    "Markdown",
+    "markdown",
 ]
 
 [tool.setuptools]
